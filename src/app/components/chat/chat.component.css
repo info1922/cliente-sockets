@@ -1,0 +1,27 @@
+.chat-mensaje {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
+    border: none;
+}
+
+.chat-caja {
+    margin-top: 5px;
+    align-items: center;
+}
+
+.caja-texto {
+    width: 80%;
+}
+
+.caja-caja-texto {
+    resize: none;
+    width: 100%;
+}
+
+.caja-boton {
+    width: 15%;
+}
+
+.boton-circulo {
+    width: 50px;
+    height: 50px;
+}

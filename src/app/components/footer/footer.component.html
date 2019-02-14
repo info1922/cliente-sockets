@@ -1,0 +1,6 @@
+<nz-footer style="text-align: center; position: fixed; bottom: 0px; width: 100%; margin-top: 20px">
+    Server status
+    <nz-badge *ngIf="wsService.socketStatus" nzStatus="success" nzText="Online" class="badge"></nz-badge>
+    <nz-badge *ngIf="!wsService.socketStatus" nzStatus="error" nzText="Offline" class="badge"></nz-badge>
+
+</nz-footer>

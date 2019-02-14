@@ -1,0 +1,7 @@
+.badge {
+    margin-left: 10px;
+}
+
+.ant-badge-not-a-wrapper {
+    vertical-align: baseline;
+}
