@@ -1,0 +1,25 @@
+.caja{
+  margin: 0 auto;
+  width: 50%;
+  position: relative;
+  height: auto;
+}
+
+.chat-mensaje {
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
+  border: none;
+  margin: 20px;
+  display: table;
+
+}
+
+.par {
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
+  border: none;
+  margin: 20px auto;
+  width: 80%
+}
+
+.badge {
+  margin-left: 10px;
+}

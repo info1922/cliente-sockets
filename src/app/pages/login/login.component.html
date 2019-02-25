@@ -1,0 +1,44 @@
+<div class="caja">
+	<div nz-col nzXs="18" nzSm="10" nzMd="10" nzLg="8" nzXl="4" style="margin: 0 auto" >
+			<nz-card class="chat-mensaje chat-caja">
+					<form nz-form class="login-form" (ngSubmit)="ingresar()">
+							<nz-form-item>
+								<nz-form-control>
+
+										<input type="text" nz-input [(ngModel)]="nombre" name="nombre" placeholder="Nombre de usuario" autocomplete="off">
+
+					<!--         <nz-form-explain *ngIf="validateForm.get('userName').dirty && validateForm.get('userName').errors">Please input your username!</nz-form-explain>
+					-->      </nz-form-control>
+							</nz-form-item>
+							<nz-form-item>
+								<nz-form-control>
+
+										<input type="password" nz-input [(ngModel)]="password" name="password" placeholder="Password">
+
+					<!--         <nz-form-explain *ngIf="validateForm.get('password').dirty && validateForm.get('password').errors">Please input your Password!</nz-form-explain>
+					-->  </nz-form-control>
+							</nz-form-item>
+							<nz-form-item>
+								<nz-form-control>
+
+
+										<div class="itms1">
+
+											<label nz-checkbox [(ngModel)]="remember" name="remember">
+													<span>Remember me</span>
+												</label>
+											</div>
+											<div class="itms2">
+
+												<a class="login-form-forgot" class="login-form-forgot">Forgot password</a>
+											</div>
+
+									<button [disabled]="nombre.trim().length === 0" nz-button class="login-form-button" [nzType]="'primary'" style="width: 100%;">Log in</button><br>
+									O
+									<a href="">registrar ahora!</a>
+								</nz-form-control>
+							</nz-form-item>
+					</form>
+				</nz-card>
+	</div>
+</div>

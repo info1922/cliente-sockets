@@ -10,11 +10,18 @@ import { ChatService } from './services/chat.service';
 export class AppComponent  implements OnInit {
   title = 'basico';
 
-  constructor(public websocketService: WebsocketService, public chatService: ChatService) {
+  constructor(
+    public websocketService: WebsocketService,
+    public chatService: ChatService) {
 
   }
 
   ngOnInit() {
     // this.chatService.enviarMensaje('Hola desde angular');
+    this.chatService.getMessagesPrivate().subscribe(msg => {
+      console.log(msg);
+    });
   }
+
+
 }

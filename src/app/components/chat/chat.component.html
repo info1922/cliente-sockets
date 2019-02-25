@@ -1,32 +1,40 @@
-<nz-card style="width:100%;" nzTitle="Chat" class="chat-mensaje">
-    <nz-list [nzGrid]="{gutter: 16, span: 6}">
-        <nz-list-item *ngFor="let item of data">
-            <!-- <nz-skeleton *ngIf="!item" [nzAvatar]="true" [nzParagraph]="{ rows: 1 }"></nz-skeleton> -->
-            <nz-list-item-meta *ngIf="item" [nzTitle]="nzTitle" nzAvatar="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" [nzDescription]="item.cuerpo">
-                <ng-template #nzTitle>
-                    <a href="https://ng.ant.design">{{item.de}}</a>
-                </ng-template>
-            </nz-list-item-meta>
-        </nz-list-item>
-    </nz-list>
-</nz-card>
+    <nz-card style="width:100%;" class="chat-mensaje" id="chatmensaje">
+            <nz-list [nzGrid]="{gutter: 16, span: 6}" >
+                <nz-list-item *ngFor="let item of data">
+                    <!-- <nz-skeleton *ngIf="!item" [nzAvatar]="true" [nzParagraph]="{ rows: 1 }"></nz-skeleton> -->
+                    <nz-list-item-meta *ngIf="item" [nzTitle]="nzTitle" nzAvatar="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" [nzDescription]="item.cuerpo">
+                        <ng-template #nzTitle >
+                            <a href="https://ng.ant.design">{{item.de}}</a>
+                        </ng-template>
+                    </nz-list-item-meta>
+                </nz-list-item>
 
-<nz-card style="width:100%;" class="chat-mensaje chat-caja">
-    <form nz-form [nzLayout]="'inline'" (ngSubmit)="enviar()">
-        <nz-form-item class="caja-texto">
-            <nz-form-control [nzSm]="1000" [nzXs]="1000" class="caja-caja-texto">
-                <textarea [(ngModel)]="texto" #valor class="caja-caja-texto" name="texto" placeholder="Mensaje" nz-input placeholder="Di algo" autofocus autocomplete="off" (keyup.enter)="event(valor.value)">
-                </textarea>
-            </nz-form-control>
-        </nz-form-item>
+            </nz-list>
 
-        <nz-form-item class="caja-boton">
-            <nz-form-control [nzSm]="1000" [nzXs]="1000">
-                <button nz-button [nzSize]="size" nzType="primary" nzShape="circle" class="boton-circulo">
-                    <i nz-icon type="message">
-                    </i>
-            </button>
-            </nz-form-control>
-        </nz-form-item>
-    </form>
-</nz-card>
+    </nz-card>
+    <div class="typing-indicator" id="indicador">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nz-card style="width:100%;" class="chat-mensaje chat-caja">
+        <form nz-form [nzLayout]="'inline'" (ngSubmit)="enviar()">
+            <nz-form-item class="caja-texto">
+                <nz-form-control [nzSm]="1000" [nzXs]="1000" class="caja-caja-texto">
+                    <textarea [(ngModel)]="texto" #valor class="caja-caja-texto" name="texto" placeholder="Mensaje" nz-input placeholder="Di algo" autofocus autocomplete="off" (keyup.enter)="event(valor.value)">
+                    </textarea>
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item class="caja-boton">
+                <nz-form-control [nzSm]="1000" [nzXs]="1000">
+                    <button nz-button [nzSize]="size" nzType="primary" nzShape="circle" class="boton-circulo">
+                        <i nz-icon type="message">
+                        </i>
+                </button>
+                </nz-form-control>
+            </nz-form-item>
+        </form>
+    </nz-card>
+

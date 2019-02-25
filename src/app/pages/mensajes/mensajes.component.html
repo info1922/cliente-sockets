@@ -1,0 +1,32 @@
+<div class="caja">
+  <nz-card style="width:100%;" class="chat-mensaje">
+      <div nz-col nzSpan="4">
+        <nz-avatar [nzSize]="64" nzIcon="user"></nz-avatar>
+      </div>
+
+      <div nz-col nzSpan="5" style="top: 20px">
+        <h4 >{{wsService.usuario.nombre}}</h4>
+      </div>
+
+      <div nz-col nzSpan="15" style="top: 20px">
+          Status
+          <nz-badge nzStatus="success" nzText="Online" class="badge"></nz-badge>
+          <!-- <nz-badge nzStatus="error" nzText="Offline" class="badge"></nz-badge> -->
+
+      </div>
+  </nz-card>
+</div>
+
+<div nz-row class="par">
+    <div nz-col nzSpan="8">
+        <nz-card>
+            <h4>Usuarios</h4>
+        </nz-card>
+    </div>
+    <div nz-col nzSpan="16">
+        <app-chat></app-chat>
+    </div>
+</div>
+
+<app-footer></app-footer>
+
