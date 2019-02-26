@@ -8,19 +8,23 @@
         <h4 >{{wsService.usuario.nombre}}</h4>
       </div>
 
-      <div nz-col nzSpan="15" style="top: 20px">
+      <div nz-col nzSpan="10" style="top: 20px">
           Status
           <nz-badge nzStatus="success" nzText="Online" class="badge"></nz-badge>
           <!-- <nz-badge nzStatus="error" nzText="Offline" class="badge"></nz-badge> -->
 
       </div>
+
+      <div nz-col nzSpan="5" style="top: 20px">
+        <button nz-button nzType="primary" (click)="salir()">Salir</button>
+    </div>
   </nz-card>
 </div>
 
 <div nz-row class="par">
     <div nz-col nzSpan="8">
         <nz-card>
-            <h4>Usuarios</h4>
+            <app-lista-usuarios></app-lista-usuarios>
         </nz-card>
     </div>
     <div nz-col nzSpan="16">
